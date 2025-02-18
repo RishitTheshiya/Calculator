@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.quizgame {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2.question {
+    text-align: center;
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+li:hover {
+    border-color: #007BFF; 
+    background-color: #e7f1ff; 
+}
+
+input[type="radio"] {
+    display: none; /* Hide the radio button */
+}
+
+label {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.3s, background-color 0.3s;
+}
+
+/* Change color of the label when the corresponding radio button is checked */
+input[type="radio"]:checked + label {
+    background-color: #007BFF; /* Background color for selected option */
+    color: white; /* Text color for selected option */
+}
+
+input[type="radio"]:checked + label {
+    background-color: #007BFF; /* Background color for selected option */
+    color: white; /* Text color for selected option */
+}
+
+label:hover {
+    color: #007BFF; /* Change text color on hover */
+}
+
+.btn {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .quizgame {
+        padding: 15px;
+    }
+
+    h2.question {
+        font-size: 1.5em; /* Slightly smaller font size */
+    }
+
+    li {
+        margin: 8px 0; /* Reduce margin for smaller screens */
+    }
+
+    button {
+        padding: 10px; /* Adjust button padding */
+        width: 100%; /* Make button full width */
+    }
+}
+
+@media (max-width: 480px) {
+    h2.question {
+        font-size: 1.2em; /* Further reduce font size for very small screens */
+    }
+
+    label {
+        padding: 8px; /* Adjust label padding */
+    }
+
+    button {
+        padding: 12px; /* Adjust button padding */
+    }
+}
