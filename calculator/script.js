@@ -1,11 +1,10 @@
 document.addEventListener('keydown', function(event) {
     const key = event.key;
 
-    // Check if the key is a number or an operator
     if ('0123456789/*-+'.includes(key)) {
         appendToDisplay(key);
     } else if (key === 'Enter' || key === '=') {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
         calculate();
     } else if (key === 'Backspace') {
         deleteLast();
@@ -16,31 +15,31 @@ document.addEventListener('keydown', function(event) {
 
 function checkEnter(event) {
     if (event.key === 'Enter') {
-        event.preventDefault(); // Prevent form submission
+        event.preventDefault(); 
         calculate();
     }
 }
 
 function appendToDisplay(value) {
     const display = document.getElementById('display');
-    display.value += value; // Append the clicked value to the display
+    display.value += value; 
 }
 
 function clearDisplay() {
     const display = document.getElementById('display');
-    display.value = ''; // Clear the display
+    display.value = '';
 }
 
 function deleteLast() {
     const display = document.getElementById('display');
-    display.value = display.value.slice(0, -1); // Remove the last character
+    display.value = display.value.slice(0, -1); 
 }
 
 function calculate() {
     const display = document.getElementById('display');
     try {
-        display.value = eval(display.value); // Evaluate the expression
+        display.value = eval(display.value);
     } catch (error) {
-        display.value = 'Error'; // Display error if evaluation fails
+        display.value = 'Error'; 
     }
 }
